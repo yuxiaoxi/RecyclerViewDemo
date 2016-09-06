@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recycler_view_test_item_person_view"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="#a0a0a0"
+    >
+    <TextView
+        android:id="@+id/recycler_view_test_item_person_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:background="#ffffff"
+        />
+    <TextView
+        android:id="@+id/recycler_view_test_item_person_age_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:background="#ffffff"
+        android:textSize="15sp"
+        />
+</LinearLayout>
