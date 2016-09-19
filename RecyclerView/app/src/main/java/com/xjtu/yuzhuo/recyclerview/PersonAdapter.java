@@ -4,6 +4,7 @@ package com.xjtu.yuzhuo.recyclerview;
  * Created by yuzhuo on 16/9/6.
  */
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -53,7 +54,7 @@ public class PersonAdapter extends RecyclerView.Adapter {
         holder.position = i;
         Person person = list.get(i);
         holder.nameTv.setText(person.getName());
-        holder.ageTv.setText(person.getAge() + "岁");
+        holder.ageTv.setSpecifiedTextsColor("我的老家","老家", Color.parseColor("#FF4081"),18);
     }
 
     @Override
@@ -65,13 +66,13 @@ public class PersonAdapter extends RecyclerView.Adapter {
     {
         public View rootView;
         public TextView nameTv;
-        public TextView ageTv;
+        public SpannableTextView ageTv;
         public int position;
 
         public PersonViewHolder(View itemView) {
             super(itemView);
             nameTv = (TextView) itemView.findViewById(R.id.recycler_view_test_item_person_name_tv);
-            ageTv = (TextView) itemView.findViewById(R.id.recycler_view_test_item_person_age_tv);
+            ageTv = (SpannableTextView) itemView.findViewById(R.id.recycler_view_test_item_person_age_tv);
             rootView = itemView.findViewById(R.id.recycler_view_test_item_person_view);
             rootView.setOnClickListener(this);
             rootView.setOnLongClickListener(this);

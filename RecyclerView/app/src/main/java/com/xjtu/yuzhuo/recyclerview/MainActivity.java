@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements PersonAdapter.OnR
 
     }
 
+
     @Override
     public boolean onItemLongClick(int position) {
         adapter.notifyItemRemoved(position);
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements PersonAdapter.OnR
                 person.setAge(25);
                 adapter.notifyItemInserted(2);
                 personList.add(2, person);
+
                 adapter.notifyItemRangeChanged(2, adapter.getItemCount());
                 break;
         }
